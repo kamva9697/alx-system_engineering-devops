@@ -9,3 +9,4 @@
     _  **3-new_owner**: Change the ownership of the file hello to the user betty
     - **4-empty**: Creates an empty files called hello
     - **100-change_owner_and_group**: Changes the owner to vincent and the group owner to staff
+    - **101-symbolic_link_permissions**: Changes the owner and group owner of __hello to vincent and staff
