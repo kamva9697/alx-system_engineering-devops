@@ -8,3 +8,4 @@
     -  **2-groups**: Prints all the groups the current user is part of
     _  **3-new_owner**: Change the ownership of the file hello to the user betty
     - **4-empty**: Creates an empty files called hello
+    - **100-change_owner_and_group**: Changes the owner to vincent and the group owner to staff
