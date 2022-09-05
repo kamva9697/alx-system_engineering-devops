@@ -10,6 +10,8 @@ echo $2 >> $1
 # make the script executable
 chmod +x $1
 
+cat $1
+
 # git add
 git add .
 
