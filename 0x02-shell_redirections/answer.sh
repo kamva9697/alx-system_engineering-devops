@@ -36,7 +36,7 @@ if [ $push_flag -gt 0 ]; then
   git add .
 
   # git comment
-  git commit -m "Task ${filename:0:1}"
+  git commit -m "Task ${filename:0:2}"
 
   #git push
   git push
