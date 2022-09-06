@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $Path set
+set
