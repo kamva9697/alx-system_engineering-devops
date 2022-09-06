@@ -1,22 +1,43 @@
 #!/bin/bash
 
+push_flag=0
+
+while getopts 'ps:a:' OPTS; do
+  case "$OPTS" in 
+    p)
+      push_flag=1
+      ;;
+    s)
+      filename="${OPTARG}"
+      ;;
+    a)
+      answer="${OPTARG}"
+      ;;
+    *)
+      echo "Invalid option"
+      ;;
+  esac
+done
+
 # echo the shebang to the script
-echo '#!/bin/bash' > $1
+echo '#!/bin/bash' > "${filename}" 2>&1 
 
 # echo the answer into the script
 
-echo $2 >> $1
+printf "${answer}\n" >> "${filename}" 2>&1 
 
 # make the script executable
-chmod +x $1
+chmod +x "${filename}"
 
-cat $1
+cat "${filename}"
 
-# git add
-git add .
+if [ $push_flag -gt 0 ]; then
+  # git add
+  git add .
 
-# git comment
-git commit -m "Task ${1:0}"
+  # git comment
+  git commit -m "Task ${filename:0:1}"
 
-#git push
-git push
+  #git push
+  git push
+fi
